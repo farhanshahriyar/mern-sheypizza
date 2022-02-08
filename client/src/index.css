@@ -22,3 +22,13 @@ code {
 .navbar-brand {
   color: black !important;
 }
+
+/* font size home page */
+h1 {
+  font-size: 20px !important;
+}
+
+/* box settings */
+.flex-container {
+  display: flex !important;
+}

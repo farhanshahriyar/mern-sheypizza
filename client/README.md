@@ -1,4 +1,4 @@
-# coded by MD FARHAN SHAHRIYAR | 183120008 | NDUB 
+# Coded by MD FARHAN SHAHRIYAR | 183120008 | NDUB 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
