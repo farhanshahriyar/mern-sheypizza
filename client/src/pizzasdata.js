@@ -12,7 +12,7 @@ const pizzas = [{
     "large": 400
   }],
   "category": "nonveg",
-  "image": "https://www.dominos.co.in/files/items/Pepper_Barbeque.jpg",
+  "image": "https://5.imimg.com/data5/HW/SD/MY-29540739/pepper-barbecue-chicken-500x500.png",
   "description": "Pepper Barbecue Chicken I Cheese"
 }, {
 
@@ -28,7 +28,7 @@ const pizzas = [{
     "large": 400
   }],
   "category": "nonveg",
-  "image": "https://www.dominos.co.in/files/items/Non-Veg_Supreme.jpg",
+  "image": "https://i0.wp.com/chefchoice.com.np/wp-content/uploads/2020/07/Non-Veg_Supreme.jpg",
   "description": "Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers"
 }, {
 
@@ -60,7 +60,7 @@ const pizzas = [{
     "large": 420
   }],
   "category": "veg",
-  "image": "https://www.crazymasalafood.com/wp-content/images/jalepeno.jpg",
+  "image": "https://parcelwalaa.in/wp-content/uploads/2021/08/Veg_Extravaganz-1.jpg",
   "description": "This pizza is amazing and can become more delicious if we will add some more cheese in it. Ingredients are yeast, sugar, olive oil, salt, and all-purpose flour in a big bowl. After mixing all the ingredients, it is baked by adding Jalapeno and Paprika with corns over the cheese layer. The base is made crunchy to give it best taste. It can be made more tasty by sprinkling chili flakes and Oregano as per the taste."
 }, {
 
