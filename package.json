@@ -1,6 +1,27 @@
 {
   "dependencies": {
     "@babel/core": "^7.17.0",
-    "babel-loader": "^8.2.3"
+    "babel-loader": "^8.2.3",
+    "express": "^4.17.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "pizzaproject",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhanshahriyar/mern-sheypizza.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhanshahriyar/mern-sheypizza/issues"
+  },
+  "homepage": "https://github.com/farhanshahriyar/mern-sheypizza#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
