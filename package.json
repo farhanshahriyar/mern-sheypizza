@@ -2,7 +2,8 @@
   "dependencies": {
     "@babel/core": "^7.17.0",
     "babel-loader": "^8.2.3",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.2.3"
   },
   "scripts": {
     "start": "node server.js"
