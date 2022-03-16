@@ -11,7 +11,7 @@ export default function Pizza({pizza}) {
     const handleShow = () => setShow(true);
 
   return (
-    <div style={{margin:'70px'}} className='shadow p-3 mb-5 bg-white rounded'>
+    <div className='shadow p-3 mb-5 bg-white rounded'>
 
         <div onClick={handleShow}>
             <h1>{pizza.name}</h1>
