@@ -1,9 +1,9 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux'; //cart function 
 
 
 export default function Navbar() {
-  const cartstate = useSelector(state=>state.cartReucer)
+  const cartstate = useSelector(state=>state.cartReducer) //cart object
   return (
     <div>
         <nav className="navbar navbar-expand-lg shadow-lg p3 mb-5 bg-white rounded">

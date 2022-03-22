@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 import {Modal} from 'react-bootstrap'
-import {useDispatch, useSelector} from 'react-redux'
-import { addToCart } from '../actions/cartActions';
+import {useDispatch, useSelector} from 'react-redux' //cartfunction
+import { addToCart } from '../actions/cartActions'; //cartfunction
 
 
 export default function Pizza({pizza}) {
@@ -14,7 +14,7 @@ export default function Pizza({pizza}) {
 
     const dispatch = useDispatch()
     function addtocart() {
-        dispatch(addToCart(pizza, quantity, varient))
+        dispatch(addToCart(pizza, quantity, varient)) //cartfunction
     }
 
   return (

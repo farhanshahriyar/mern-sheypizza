@@ -6,15 +6,21 @@ import thunk from 'redux-thunk'
 
 import {composeWithDevTools} from 'redux-devtools-extension'
 import {getAllPizzasReducer} from './reducers/pizzaReducers'
-import { cartReducer } from './reducers/cartReducer'
+import { cartReducer } from './reducers/cartReducer' //cartfunction path
 
 
-const finalReducer = combineReducers({
+const finalReducer = combineReducers({  
     getAllPizzasReducer : getAllPizzasReducer,
-    cartReducer : cartReducer
+    cartReducer : cartReducer           //cartfunction 
 })
 
-const initialState = {}
+const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [] //cartfunction stay
+
+const initialState = {    //cartfunction stay     
+    cartReducer : {
+        cartItems: cartItems  //cartItems reducer
+    }                               
+}
 const composeEnhancers = composeWithDevTools({})
 
 const store = createStore(finalReducer, initialState, composeEnhancers(applyMiddleware(thunk)))
