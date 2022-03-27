@@ -17,31 +17,24 @@ function Cartscreen() {
              {cartItems.map(item=>{
                return <div className='flex-container'>
 
-                      <div>
+                      <div className='text-start m-1'>  
                         <br></br>
                         <h1>{item.name}[{item.varient}]</h1>
                         <h1>Price : {item.quantity} * {item.prices[0][item.varient]} = {item.price}</h1>
-                        <h1>Quantity : </h1>
-                        <i class="fa fa-plus"></i>
+                        <h1 style={{display:'inline'}}>Quantity : </h1>
+                        <i className="fa fa-plus"></i>
                         <b>{item.quantity}</b>
-                        <i class="fa fa-minus"></i> 
+                        <i className="fa fa-minus"></i> 
+                        <hr></hr>
                       </div>
+                      
+                      <div className='m-1 w-100 mt-5'>
+                        <img src={item.image} style={{height:'80px' , height:'80px'}}></img>
+                      </div>
+                      
                       <div>
-
-
-
-
-
+                      <i className="fa fa-trash mt-5"></i> 
                       </div>
-                      <div>
-
-
-
-
-
-                      </div>
-
-
               </div>
              })}
 

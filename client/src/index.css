@@ -33,6 +33,7 @@ h1 {
   display: flex !important;
 }
 
+/* button sector */
 .btn {
   background-color: rgb(0, 0, 0) !important;
   color: rgb(255, 255, 255) !important;
@@ -42,3 +43,20 @@ select {
   box-shadow: none !important;
   border-color: black !important;
 }
+
+/* plus minus function in cart sector */
+.fa-plus {            
+  color: #d70f64;
+  margin: 5px;
+}
+
+.fa-minus {
+  color: #d70f64;
+  margin: 5px;
+}
+
+.fa-trash {
+  color: #b8004d;
+}
+
+/* # */
