@@ -1,5 +1,6 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux'; //cart function 
+//addtocart_action
 
 
 export default function Navbar() {
