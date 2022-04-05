@@ -7,6 +7,7 @@ function Cartscreen() {
 
   const cartstate = useSelector(state=>state.cartReducer)
   const cartItems = cartstate.cartItems
+  var subtotal = cartItems.reduce((x , item)=> x+item.price , 0)
   const dispatch = useDispatch()
 
 
@@ -21,7 +22,7 @@ function Cartscreen() {
                       <div className='text-start m-1'>  
                         <br></br>
                         <h1>{item.name}[{item.varient}]</h1>
-                        <h1>Price : {item.quantity} * {item.prices[0][item.varient]} = {item.price}</h1>
+                        <h1>Price : {item.quantity} * {item.prices[0][item.varient]} = {item.price}/= BDT</h1>
                         <h1 style={{display:'inline'}}>Quantity : </h1>
                         <i className="fa fa-plus" onClick={()=>{dispatch(addToCart(item , item.quantity+1 ,item.varient))}}></i>
                         <b>{item.quantity}</b>
@@ -40,7 +41,10 @@ function Cartscreen() {
              })}
 
              </div>
-           <div className='col-md-4'>
+           <div className='col-md-4 text-right'>
+             <h2 style={{fontsize:'45px'}}>SubTotal : {subtotal}/= BDT</h2>
+             <hr></hr>
+             <button className='btn'>ORDER NOW</button>
            </div>
 
          </div>
