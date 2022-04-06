@@ -41,6 +41,7 @@ function Cartscreen() {
              })}
 
              </div>
+             
            <div className='col-md-4 text-right'>
              <h2 style={{fontsize:'45px'}}>SubTotal : {subtotal}/= BDT</h2>
              <hr></hr>

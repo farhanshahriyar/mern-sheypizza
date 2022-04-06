@@ -60,3 +60,8 @@ select {
 }
 
 /* # */
+/* login and reg screen style */
+input {
+  margin-top: 20px !important;
+  box-shadow: none !important;
+}

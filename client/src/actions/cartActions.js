@@ -13,8 +13,8 @@ export const addToCart=(pizza , quantity , varient)=>(dispatch , getState)=> {  
     }
 
     //limitation for pizza
-    if(cartItem.quantity>10) {
-        alert('Sorry! you cant add more than 10 pizzas')
+    if(cartItem.quantity>100) {
+        alert('Sorry! you cant add more than 100 pizzas')
     }else {
         if(cartItem.quantity<1){
             dispatch({type:'DELETE_FROM_CART', payload :  pizza})
