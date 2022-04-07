@@ -1,11 +1,13 @@
-import React , { useState , useEffect } from 'react'
-
+import React , { useState , useEffect } from 'react';
+import {useDispatch , useSelector} from 'react-redux';
+import { registerUser } from "../actions/userActions";
 export default function RegisterScreen() {
     const[name, setname] = useState('');
     const[email, setemail] = useState('');
     const[password, setpassword] = useState('');
     const [cpassword, setcpassword] = useState('');
 
+    const dispatch = useDispatch()
     function register () {
 
         if (password!=cpassword) {
@@ -17,6 +19,7 @@ export default function RegisterScreen() {
                 password
             }
             console.log(user);
+            dispatch(registerUser(user))
         }
     }
 
