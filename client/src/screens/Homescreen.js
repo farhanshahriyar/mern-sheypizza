@@ -4,6 +4,7 @@ import { getAllPizzas } from '../actions/pizzaActions'
 import Loading from '../components/Loading';
 import Pizza from '../components/Pizza';
 import Error from '../components/Error';
+import Filter from '../components/Filter';
 
 export default function Homescreen() {
  
@@ -20,6 +21,7 @@ export default function Homescreen() {
 
   return (
     <div>
+      <Filter></Filter>
         <div className='row justify-content-center'>
 
         {loading ? (<Loading></Loading>) : error ? (<Error error='Something went wrong! Server ERROR !'></Error>) : (
