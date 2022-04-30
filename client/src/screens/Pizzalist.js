@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react' //5.27 3no vd
+import React, { useState , useEffect} from 'react' 
 import {useSelector, useDispatch} from 'react-redux';
 import { getAllPizzas } from "../actions/pizzaActions"
 import Error from "../components/Error"
@@ -20,8 +20,8 @@ export default function Pizzalist() {
         {loading && (<Loading></Loading>)}
         {error && (<Error error="something went wrong"></Error>)}
 
-        <table className='table'>
-            <thead>
+        <table className='table table-bordered'>
+            <thead className='thead table-dark'>
                 <tr>
                     <th>Name</th>
                     <th>Price</th>
@@ -29,9 +29,24 @@ export default function Pizzalist() {
                     <th>Actions</th>
                 </tr>
             </thead>
-            {pizzas && pizzas.map()} 
+            <tbody>
+            {pizzas && pizzas.map(pizza=>{
+                return <tr>
+                    <td>{pizza.name}</td>
+                    <td>
+                        Small : {pizza.prices[0]['small']}<br></br>
+                        Medium : {pizza.prices[0]['medium']}<br></br>
+                        Large : {pizza.prices[0]['large']}<br></br>
+                    </td>
+                    <td>{pizza.category}</td>
+                    <td>
+                        <i className='fa fa-trash m-3'></i>
+                        <i className='fa fa-edit m-3'></i>
+                    </td>
+                </tr>
+            })} 
+            </tbody>
         </table>
-    
     </div>
   )
 }
