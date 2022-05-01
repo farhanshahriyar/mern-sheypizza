@@ -2,15 +2,15 @@ import React, {useState, useEffect} from 'react'
 
 export default function Addpizza() {
   const[name,setname] = useState('')
-  const[smallprice,setsmallprice] = useState('')
-  const[mediumprice,setmediumprice] = useState('')
-  const[largeprice,setlargeprice] = useState('')
+  const[smallprice,setsmallprice] = useState()
+  const[mediumprice,setmediumprice] = useState()
+  const[largeprice,setlargeprice] = useState()
   const[image,setimage]= useState('')
   const[description,setdescription]= useState('')
   const[category,setcategory]= useState('')
 
   function formHandler(e) {
-    e.prevenDefault();
+    e.preventDefault();
 
     const pizza = {
       name,
