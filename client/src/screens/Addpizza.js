@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import { useDispatch , useSelector } from 'react-redux'  //addpizza
+import { addPizza } from '../actions/pizzaActions' //addpizza
 
 export default function Addpizza() {
   const[name,setname] = useState('')
@@ -8,6 +10,8 @@ export default function Addpizza() {
   const[image,setimage]= useState('')
   const[description,setdescription]= useState('')
   const[category,setcategory]= useState('')
+
+  const dispatch = useDispatch()  //5:31
 
   function formHandler(e) {
     e.preventDefault();
@@ -24,6 +28,7 @@ export default function Addpizza() {
       }
     }
     console.log(pizza);
+    dispatchEvent(addPizza(pizza));
   }
   
   return (
