@@ -36,7 +36,7 @@ export default function Addpizza() {
       }
     }
     console.log(pizza);
-    dispatchEvent(addPizza(pizza));
+    dispatch(addPizza(pizza));
   }
   
   return (
