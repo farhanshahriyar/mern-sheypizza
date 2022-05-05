@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import { useDispatch , useSelector } from 'react-redux'  //addpizza
 import { addPizza } from '../actions/pizzaActions' //addpizza
+import Loading from '../components/Loading';
+import Pizza from '../components/Pizza';
+import Error from '../components/Error';
+import Filter from '../components/Filter';
 
 export default function Addpizza() {
   const[name,setname] = useState('')
@@ -11,7 +15,11 @@ export default function Addpizza() {
   const[description,setdescription]= useState('')
   const[category,setcategory]= useState('')
 
-  const dispatch = useDispatch()  //5:31
+  const dispatch = useDispatch()  
+
+  //add pizza logic
+  const addpizzastate = useSelector(state=>state.addPizzaReducer)
+  const {success, error, loading} = addpizzastate
 
   function formHandler(e) {
     e.preventDefault();
@@ -35,6 +43,11 @@ export default function Addpizza() {
     <div>
         <div className='text-start'>
           <h1>Add Pizza</h1>
+
+          {loading && (<Loading></Loading>)}
+          {error && (<Error error='Something went wrong'></Error>)}
+          {success && (<success success='New Pizza Added Successfully'></success>)}
+
           <form onSubmit={formHandler}>
             <input className='form-control' type="text" placeholder='name' value={name} onChange={(e)=>{setname(e.target.value)}}></input>
             <input className='form-control' type="text" placeholder='small varient price' value={smallprice} onChange={(e)=>{setsmallprice(e.target.value)}}></input>
