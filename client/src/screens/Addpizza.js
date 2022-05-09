@@ -5,6 +5,7 @@ import Loading from '../components/Loading';
 import Pizza from '../components/Pizza';
 import Error from '../components/Error';
 import Filter from '../components/Filter';
+import Success from '../components/Success';
 
 export default function Addpizza() {
   const[name,setname] = useState('')
@@ -44,9 +45,10 @@ export default function Addpizza() {
         <div className='text-start'>
           <h1>Add Pizza</h1>
 
+
           {loading && (<Loading></Loading>)}
-          {error && (<Error error='Something went wrong'></Error>)}
-          {success && (<success success='New Pizza Added Successfully'></success>)}
+            {success && (<Success success='New Pizza Added Successfully'></Success>)}
+            {error && (<Error error='Something went wrong'></Error>)}
 
           <form onSubmit={formHandler}>
             <input className='form-control' type="text" placeholder='name' value={name} onChange={(e)=>{setname(e.target.value)}}></input>

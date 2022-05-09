@@ -39,4 +39,4 @@ const composeEnhancers = composeWithDevTools({})
 
 const store = createStore(finalReducer, initialState, composeEnhancers(applyMiddleware(thunk)))
 
-export default store
+export default store 
