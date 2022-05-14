@@ -15,7 +15,7 @@ export default function Userlist() {
   return (
     <div>
         <h2>SheyPizza's User List</h2>
-        {Loading && <Loading></Loading>}
+        
         {error && <Error error="Something went wrong"></Error>}
         <table className='table table-striped table-bordered'>
             <thead className='thead table-dark'>
