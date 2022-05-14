@@ -48,6 +48,7 @@ export default function Editpizza({match}) {
             e.preventDefault();
         
             const editedpizza = {
+              _id : match.params.pizzaid,
               name,
               image,
               description,

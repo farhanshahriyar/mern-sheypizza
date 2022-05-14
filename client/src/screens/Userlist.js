@@ -1,52 +1,42 @@
 import React, { useState , useEffect} from 'react' 
 import {useSelector, useDispatch} from 'react-redux';
-import { getAllPizzas } from "../actions/pizzaActions"
 import Error from "../components/Error"
 import Filter from "../components/Filter"
 import Loading from "../components/Loading"
-
-export default function Pizzalist() {
+import { deleteUser, getAllUsers } from "../actions/userActions" //userlistlib
+export default function Userlist() {
     const dispatch = useDispatch()
+    const userssate = useSelector(state=> state.getAllUsersReducer)
+    const {error, loading, users} = userssate
 
-    const pizzasstate = useSelector(state=>state.getAllPizzasReducer)
-
-    const {pizzas , error, loading} = pizzasstate
     useEffect(() => {
-    dispatch(getAllPizzas())
-  }, []);
+        dispatch(getAllUsers())
+    }, [])
   return (
     <div>
         <h2>SheyPizza's User List</h2>
-        {loading && (<Loading></Loading>)}
-        {error && (<Error error="something went wrong"></Error>)}
-
-        <table className='table table-bordered'>
+        {Loading && <Loading></Loading>}
+        {error && <Error error="Something went wrong"></Error>}
+        <table className='table table-striped table-bordered'>
             <thead className='thead table-dark'>
                 <tr>
-                    <th>USER ID</th>
-                    <th>NAME</th>
-                    <th>EMAIL</th>
-                    <th>PASSWORD</th>
+                    <th>User ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
-            {pizzas && pizzas.map(pizza=>{
-                return <tr>
-                    <td>{pizza.name}</td>
-                    <td>
-                        Small : {pizza.prices[0]['small']}<br></br>
-                        Medium : {pizza.prices[0]['medium']}<br></br>
-                        Large : {pizza.prices[0]['large']}<br></br>
-                    </td>
-                    <td>{pizza.category}</td>
-                    <td>
-                        <i className='fa fa-trash m-3'></i>
-                        <i className='fa fa-edit m-3'></i>
-                    </td>
-                </tr>
-            })} 
+                {users && users.map(user=>{
+                    return <tr>
+                        <td>{user._id}</td>
+                        <td>{user.name}</td>
+                        <td>{user.email}</td>
+                        <td><i className='fa fa-trash' onClick={()=>{dispatch(deleteUser(user._id))}}></i></td>
+                    </tr>
+                })}
             </tbody>
-        </table>
+        </table> 
     </div>
   )
 }

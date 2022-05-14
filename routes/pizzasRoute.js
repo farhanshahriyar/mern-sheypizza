@@ -36,4 +36,24 @@ router.post("/addpizza", async(req,res) => {
     }
 })
 
+router.post("/editpizza", async (req,res)=>{
+    const editpizza = req.body.editpizza
+
+    try {
+        const pizza = await Pizza.findOne({_id: editpizza._id})
+        pizza.name = editedpizza.name,
+        pizza.description = editedpizza.description,
+        pizza.image = editedpizza.image,
+        pizza.category = editedpizza.category,
+        pizza.prices = [editedpizza.prices]
+
+        await pizza.save()
+
+        res.send('Pizza Details Edited Successfully')
+
+    }catch(error) {
+        return res.status(400).json({message: error});
+    }
+})
+
 module.exports = router; 
