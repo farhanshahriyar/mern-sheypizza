@@ -38,7 +38,7 @@ router.post("/addpizza", async(req,res) => {
 
 
 //pizzaideditpage
-route.post("/getpizzabyid", async (req, res) => {
+router.post("/getpizzabyid", async (req, res) => {
     const pizzaid = req.body.pizzaid
     try {
         const pizza = await Pizza.findOne({_id : pizzaid})
