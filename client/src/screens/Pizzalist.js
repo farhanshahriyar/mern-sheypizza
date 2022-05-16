@@ -42,7 +42,7 @@ export default function Pizzalist() {
                     <td>{pizza.category}</td>
                     <td>
                         <i className='fa fa-trash m-3'></i>
-                        <Link to={`/admin/editpizza${pizza._id}`}><i className='fa fa-edit m-3'></i></Link>
+                        <Link to={`/admin/editpizza/${pizza._id}`}><i className='fa fa-edit m-3'></i></Link>
                     </td>
                 </tr>
             })} 

@@ -5,6 +5,7 @@ import Addpizza from './Addpizza';
 import Orderlist from './Orderlist';
 import Pizzalist from './Pizzalist';
 import Userlist from './Userlist';
+import Editpizza from './Editpizza';
 
 
 
@@ -41,6 +42,7 @@ export default function Adminscreen() {
                     <Route path="/admin/pizzalist" component={Pizzalist}></Route>
                     <Route path="/admin/orderlist" component={Orderlist}></Route>
                     <Route path="/admin/addnewpizza" component={Addpizza}></Route>
+                    <Route path="/admin/editpizza/:pizzaid" component={Editpizza}></Route>
                    
                 </BrowserRouter>
             </div>
