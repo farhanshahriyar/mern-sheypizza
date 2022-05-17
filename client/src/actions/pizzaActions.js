@@ -70,4 +70,17 @@ export const editPizza=(editedpizza)=>async dispatch=>{
 }
 
 
+//deletepizzafromlistlogic
+export const deletePizza=(pizzaid)=>async dispatch=>{
+    try{
+        const response = await axios.post('/api/pizzas/deletepizza' , {pizzaid})
+        alert('Pizza Deleted Successfully')
+        console.log(response);
+        window.location.reload()
+    }catch(error) {
+        alert('Something went wrong')
+        console.log(error);
+    }
+}
+
 

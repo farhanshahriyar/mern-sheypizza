@@ -73,4 +73,16 @@ router.post("/editpizza", async (req,res)=>{
     }
 })
 
+
+//deletepizzafromlistlogic
+router.post('/deletepizza', async(req, res) => {
+    const pizzaid = req.body.pizzaid
+    try {
+        await Pizza.findOneAndDelete({_id:pizzaid})
+        res.send('Pizza Deleted Successfully')
+    }catch(error) {
+        return res.status(400).json({message:error});
+    }
+})
+
 module.exports = router; 
