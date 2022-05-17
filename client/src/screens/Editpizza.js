@@ -56,7 +56,7 @@ export default function Editpizza({match}) {
               prices:{
                 small : smallprice,
                 medium : mediumprice,
-                large : largeprice
+                large : largeprice,
               }
             }
             dispatch(editPizza(editedpizza))

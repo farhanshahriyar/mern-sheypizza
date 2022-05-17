@@ -52,12 +52,12 @@ router.post("/getpizzabyid", async (req, res) => {
 
 
 
-
+//updatedlogic
 router.post("/editpizza", async (req,res)=>{
-    const editpizza = req.body.editpizza
+    const editedpizza = req.body.editedpizza
 
     try {
-        const pizza = await Pizza.findOne({_id: editpizza._id})
+        const pizza = await Pizza.findOne({_id: editedpizza._id})
         pizza.name = editedpizza.name,
         pizza.description = editedpizza.description,
         pizza.image = editedpizza.image,

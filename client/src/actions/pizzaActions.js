@@ -53,7 +53,7 @@ export const getPizzaById=(pizzaid)=>async dispatch=>{
         const response = await axios.post('/api/pizzas/getpizzabyid', {pizzaid})
         console.log(response);
         dispatch({type:'GET_PIZZABYID_SUCCESS', payload:response.data})
-    }catch(error){
+    }catch(error){ 
         dispatch({type:'GET_PIZZABYID_FAILED', payload:error})
     }
 }
@@ -65,7 +65,9 @@ export const editPizza=(editedpizza)=>async dispatch=>{
         console.log(response);
         dispatch({type:'EDIT_PIZZA_SUCCESS'})
     }catch(error){
-        dispatch({type:'EDIT_PIZZA_FAILED',payload:error})
+        dispatch({type:'EDIT_PIZZA_FAILED', payload:error})
     }
 }
+
+
 

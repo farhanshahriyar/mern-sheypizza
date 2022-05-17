@@ -62,7 +62,7 @@ export const getPizzaByIdReducer=(state={} , action)=>{
 
 }
 
-//addpizzalogic
+//editpizzalogic
 export const editPizzaReducer=(state={} , action)=>{
 
     switch(action.type){
