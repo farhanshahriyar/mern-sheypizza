@@ -52,6 +52,7 @@ export const getPizzaById=(pizzaid)=>async dispatch=>{
     try {
         const response = await axios.post('/api/pizzas/getpizzabyid', {pizzaid})
         console.log(response);
+        
         dispatch({type:'GET_PIZZABYID_SUCCESS', payload:response.data})
     }catch(error){ 
         dispatch({type:'GET_PIZZABYID_FAILED', payload:error})

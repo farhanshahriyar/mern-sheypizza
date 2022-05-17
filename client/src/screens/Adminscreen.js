@@ -47,12 +47,6 @@ export default function Adminscreen() {
                 </BrowserRouter>
             </div>
         </div>
-
-
-
-
-
-
     </div>
   )
 }
