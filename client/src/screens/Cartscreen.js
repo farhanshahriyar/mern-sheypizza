@@ -2,9 +2,11 @@ import React from 'react';
 import {useSelector , useDispatch} from 'react-redux' //cartscreen
 import {addToCart} from '../actions/cartActions'
 import {deleteFromCart} from '../actions/cartActions'
+import AOS from 'aos' //aos js
+import 'aos/dist/aos.css' //aos css
 
 function Cartscreen() {
-
+  AOS.init()
   const cartstate = useSelector(state=>state.cartReducer)
   const cartItems = cartstate.cartItems
   var subtotal = cartItems.reduce((x , item)=> x+item.price , 0)
@@ -13,7 +15,7 @@ function Cartscreen() {
 
   return (
     <div>
-         <div className='row justify-content-center'>
+         <div className='row justify-content-center' data-aos='fade-down'>
            <div className='col-md-6'>
              <h2 style={{fontSize: '40px'}}>Your Order From SheyPizza</h2>
              {cartItems.map(item=>{
